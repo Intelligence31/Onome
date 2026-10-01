@@ -1,1 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Alex's Birthday Surprise ♡
+    </title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="birthday">
+
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <a href="index.html">
+            ← Back
+        </a>
+
+
+        <span>
+            INTELLIGENCE
+        </span>
+
+    </div>
+
+
+
+    <!-- =================================
+         LOCKED SURPRISE
+         ================================= -->
+
+    <main
+        id="lockedPage"
+        class="locked-page"
+    >
+
+
+        <div class="lock-icon">
+            🔐
+        </div>
+
+
+        <p class="eyebrow">
+
+            A little surprise is waiting
+
+        </p>
+
+
+        <h1>
+
+            Not yet,<br>
+
+            <em>Alex.</em>
+
+        </h1>
+
+
+        <p class="locked-message">
+
+            Some things are worth waiting for.
+
+            Your birthday surprise unlocks on
+
+            <strong>
+                October 7th.
+            </strong>
+
+        </p>
+
+
+
+        <!-- LOCK COUNTDOWN -->
+
+        <div class="countdown">
+
+
+            <div class="time-box">
+
+                <span id="lockDays">
+                    00
+                </span>
+
+                <small>
+                    DAYS
+                </small>
+
+            </div>
+
+
+            <div class="colon">
+                :
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="lockHours">
+                    00
+                </span>
+
+                <small>
+                    HOURS
+                </small>
+
+            </div>
+
+
+            <div class="colon">
+                :
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="lockMinutes">
+                    00
+                </span>
+
+                <small>
+                    MINUTES
+                </small>
+
+            </div>
+
+
+            <div class="colon">
+                :
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="lockSeconds">
+                    00
+                </span>
+
+                <small>
+                    SECONDS
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+        <p class="locked-note">
+
+            Come back on October 7th ♡
+
+        </p>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         ACTUAL BIRTHDAY PAGE
+
+         Hidden until October 7
+         ================================= -->
+
+    <main
+        id="birthdayContent"
+        class="birthday-wrap"
+        hidden
+    >
+
+
+        <!-- PHOTO -->
+
+        <section class="photo-card">
+
+
+            <div class="photo-frame">
+
+                <img
+                    src="assets/alex.jpg"
+                    alt="Alex Onome Natasha"
+                >
+
+                <div class="photo-shine"></div>
+
+            </div>
+
+
+            <div class="photo-caption">
+
+                ALEX ONOME NATASHA · OCTOBER 7TH
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- MESSAGE -->
+
+        <section class="message">
+
+
+            <p class="eyebrow">
+
+                The day is finally here
+
+            </p>
+
+
+            <h1>
+
+                Happy Birthday,<br>
+
+                <em>Alex.</em> ♡
+
+            </h1>
+
+
+            <p>
+
+                Today is about celebrating you —
+                your smile, your presence, your journey,
+                and the beautiful person you are becoming.
+
+            </p>
+
+
+            <p>
+
+                May this new chapter bring you
+                genuine happiness, peaceful days,
+                beautiful memories and countless
+                reasons to smile.
+
+            </p>
+
+
+            <p>
+
+                You deserve to be celebrated today
+                and every day.
+
+            </p>
+
+
+
+            <!-- WISH BUTTON -->
+
+            <button
+                id="wishBtn"
+                class="wish-button"
+            >
+
+                Make a wish ✦
+
+            </button>
+
+
+            <p
+                id="wish"
+                class="wish"
+            ></p>
+
+
+
+            <!-- SIGNATURE -->
+
+            <div class="signature">
+
+                <span>
+                    With care,
+                </span>
+
+                <strong>
+                    Intelligence ♡
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        07 OCTOBER 2026 ·
+        A LITTLE PAGE MADE WITH CARE ♡
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

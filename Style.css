@@ -1,1 +1,874 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+
+:root {
+
+    --bg: #0c090b;
+
+    --cream: #f8eee7;
+
+    --muted: #bcaea9;
+
+    --accent: #e9a7b8;
+
+    --line: rgba(255,255,255,.11);
+
+}
+
+
+html,
+body {
+
+    min-height: 100%;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--cream);
+
+}
+
+
+body {
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+[hidden] {
+
+    display: none !important;
+
+}
+
+
+/* =================================
+   LANDING PAGE
+   ================================= */
+
+
+.landing {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(233,167,184,.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(222,177,111,.10),
+            transparent 28%
+        ),
+
+        #0c090b;
+
+}
+
+
+.glow {
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: .3;
+
+    pointer-events: none;
+
+}
+
+
+.glow-one {
+
+    background: #d9829b;
+
+    top: 5%;
+
+    left: -100px;
+
+}
+
+
+.glow-two {
+
+    background: #b88952;
+
+    right: -100px;
+
+    bottom: 5%;
+
+}
+
+
+
+/* HERO */
+
+.hero {
+
+    text-align: center;
+
+    width: min(760px, 90%);
+
+    padding: 50px 20px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.eyebrow {
+
+    text-transform: uppercase;
+
+    letter-spacing: .25em;
+
+    font-size: .68rem;
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+
+}
+
+
+.brand {
+
+    font-size: .75rem;
+
+    letter-spacing: .3em;
+
+    font-weight: 600;
+
+    margin-bottom: 16px;
+
+    color: #e5b0bc;
+
+}
+
+
+.date {
+
+    font-size: .72rem;
+
+    letter-spacing: .25em;
+
+    color: #a99a96;
+
+    margin-bottom: 28px;
+
+}
+
+
+h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(3rem, 8vw, 6.2rem);
+
+    line-height: .98;
+
+    font-weight: 600;
+
+    letter-spacing: -.04em;
+
+}
+
+
+h1 em {
+
+    font-style: italic;
+
+    color: #eab2c0;
+
+}
+
+
+.intro {
+
+    max-width: 540px;
+
+    margin: 30px auto;
+
+    color: #c5b8b3;
+
+    line-height: 1.8;
+
+    font-size: .98rem;
+
+}
+
+
+.intro strong,
+.locked-message strong {
+
+    color: #f0d8de;
+
+}
+
+
+
+/* =================================
+   COUNTDOWN
+   ================================= */
+
+
+.countdown {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 35px 0;
+
+}
+
+
+.time-box {
+
+    min-width: 75px;
+
+    padding: 15px 8px;
+
+    border:
+        1px solid
+        rgba(233,167,184,.2);
+
+    background:
+        rgba(255,255,255,.025);
+
+    border-radius: 14px;
+
+}
+
+
+.time-box span {
+
+    display: block;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 2rem;
+
+    color: #f4dce2;
+
+}
+
+
+.time-box small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: .55rem;
+
+    letter-spacing: .15em;
+
+    color: #897c78;
+
+}
+
+
+.colon {
+
+    color: #b47f8e;
+
+    font-size: 1.5rem;
+
+}
+
+
+
+/* =================================
+   BUTTON
+   ================================= */
+
+
+.button {
+
+    display: inline-flex;
+
+    gap: 18px;
+
+    align-items: center;
+
+    padding: 15px 23px;
+
+    border:
+        1px solid
+        rgba(233,167,184,.4);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size: .84rem;
+
+    transition: .3s;
+
+}
+
+
+.button:hover {
+
+    background: #e9a7b8;
+
+    color: #190f13;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.button span {
+
+    font-size: 1.1rem;
+
+}
+
+
+.tiny {
+
+    margin-top: 28px;
+
+    font-size: .7rem;
+
+    color: #776d69;
+
+}
+
+
+.sparkles {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 0;
+
+    right: 0;
+
+    text-align: center;
+
+    color: #c98c9c;
+
+    opacity: .55;
+
+    letter-spacing: .4em;
+
+}
+
+
+
+/* =================================
+   BIRTHDAY PAGE
+   ================================= */
+
+
+.birthday {
+
+    background:
+
+        radial-gradient(
+            circle at 12% 18%,
+            rgba(233,167,184,.09),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 75%,
+            rgba(202,150,92,.08),
+            transparent 30%
+        ),
+
+        #0c090b;
+
+    min-height: 100vh;
+
+}
+
+
+.topbar {
+
+    height: 72px;
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 6%;
+
+    font-size: .68rem;
+
+    letter-spacing: .18em;
+
+    color: #9f928e;
+
+}
+
+
+.topbar a {
+
+    letter-spacing: 0;
+
+    color: #d5c7c2;
+
+}
+
+
+.topbar span {
+
+    color: #e5b0bc;
+
+}
+
+
+
+/* =================================
+   LOCK SCREEN
+   ================================= */
+
+
+.locked-page {
+
+    min-height:
+        calc(100vh - 145px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        40px
+        20px
+        80px;
+
+}
+
+
+.lock-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.locked-page h1 {
+
+    font-size:
+        clamp(4rem, 10vw, 7rem);
+
+    margin-bottom: 25px;
+
+}
+
+
+.locked-message {
+
+    max-width: 500px;
+
+    color: #c4b7b2;
+
+    line-height: 1.8;
+
+}
+
+
+.locked-note {
+
+    margin-top: 28px;
+
+    color: #8f8581;
+
+    font-size: .75rem;
+
+    letter-spacing: .12em;
+
+}
+
+
+
+/* =================================
+   ACTUAL BIRTHDAY CONTENT
+   ================================= */
+
+
+.birthday-wrap {
+
+    width: min(1120px, 90%);
+
+    margin:
+        60px auto
+        80px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8%;
+
+    align-items: center;
+
+}
+
+
+.photo-card {
+
+    position: relative;
+
+}
+
+
+.photo-frame {
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: #191316;
+
+    border:
+        1px solid
+        var(--line);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.45);
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.photo-shine {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            rgba(255,255,255,.12),
+            transparent 25%,
+            transparent 70%,
+            rgba(233,167,184,.08)
+        );
+
+    pointer-events: none;
+
+}
+
+
+.photo-caption {
+
+    font-size: .68rem;
+
+    color: #8f8581;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
+    margin-top: 14px;
+
+}
+
+
+
+/* MESSAGE */
+
+.message {
+
+    padding: 20px 0;
+
+}
+
+
+.message h1 {
+
+    font-size:
+        clamp(3.1rem, 6vw, 5.2rem);
+
+    margin-bottom: 28px;
+
+}
+
+
+.message >
+p:not(.eyebrow):not(.wish) {
+
+    color: #c4b7b2;
+
+    line-height: 1.9;
+
+    font-size: 1rem;
+
+    max-width: 520px;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+/* WISH BUTTON */
+
+.wish-button {
+
+    margin-top: 12px;
+
+    border:
+        1px solid
+        rgba(233,167,184,.4);
+
+    background:
+        rgba(233,167,184,.08);
+
+    color: #f4dce2;
+
+    border-radius: 100px;
+
+    padding:
+        13px 20px;
+
+    font: inherit;
+
+    font-size: .82rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.wish-button:hover {
+
+    background: #e9a7b8;
+
+    color: #1b1115;
+
+}
+
+
+.wish {
+
+    min-height: 25px;
+
+    margin-top: 16px;
+
+    color: #e8aebe;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-style: italic;
+
+}
+
+
+
+/* SIGNATURE */
+
+.signature {
+
+    border-top:
+        1px solid
+        var(--line);
+
+    margin-top: 36px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    color: #8f8581;
+
+    font-size: .72rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+}
+
+
+.signature strong {
+
+    font-size: .9rem;
+
+    letter-spacing: .08em;
+
+    color: #e5b0bc;
+
+    text-transform: none;
+
+}
+
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        var(--line);
+
+    padding: 22px;
+
+    color: #665d5a;
+
+    font-size: .62rem;
+
+    letter-spacing: .18em;
+
+}
+
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+
+@media (max-width: 760px) {
+
+
+    .birthday-wrap {
+
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+
+        margin-top: 38px;
+
+    }
+
+
+    .photo-frame {
+
+        max-height: 620px;
+
+    }
+
+
+    .topbar {
+
+        padding: 0 5%;
+
+    }
+
+
+    .topbar span {
+
+        font-size: .57rem;
+
+    }
+
+
+    .countdown {
+
+        gap: 5px;
+
+    }
+
+
+    .time-box {
+
+        min-width: 62px;
+
+    }
+
+
+    .time-box span {
+
+        font-size: 1.5rem;
+
+    }
+
+}
